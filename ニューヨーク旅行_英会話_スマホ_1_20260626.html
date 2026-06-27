@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニューヨーク旅行 英語フレーズ図解</title>
+<style>
+  :root{
+    --bg:#eef1f6;
+    --surface:#ffffff;
+    --surface-2:#f7f9fc;
+    --text:#161b26;
+    --muted:#5b6373;
+    --border:#e1e5ee;
+    --accent:#2b5bb0;        /* NYC night blue */
+    --accent-soft:#e7eefb;
+    --taxi:#f0a92b;          /* taxi yellow */
+    --taxi-soft:#fdf1da;
+    --danger:#c8453d;
+    --danger-soft:#fbe7e5;
+    --ok:#2e8b5b;
+    --ok-soft:#e2f4ea;
+    --en:#13315c;
+    --shadow:0 1px 2px rgba(20,30,55,.06),0 6px 18px rgba(20,30,55,.06);
+    --radius:16px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#10131a;
+      --surface:#1b2029;
+      --surface-2:#222834;
+      --text:#eef1f6;
+      --muted:#9aa3b4;
+      --border:#2c333f;
+      --accent:#7aa6ec;
+      --accent-soft:#222d40;
+      --taxi:#f2bb56;
+      --taxi-soft:#36301f;
+      --danger:#f08a83;
+      --danger-soft:#3a2522;
+      --ok:#6fd49d;
+      --ok-soft:#1f3329;
+      --en:#bcd3f7;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;
+    line-height:1.7;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:18px 14px 64px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(155deg,var(--accent) 0%,#1d3f7d 100%);
+    color:#fff;border-radius:22px;padding:26px 22px;position:relative;overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .hero .skyline{position:absolute;right:-6px;bottom:-2px;width:170px;opacity:.22}
+  .hero .tag{display:inline-block;font-size:12px;letter-spacing:.08em;background:rgba(255,255,255,.18);
+    padding:4px 10px;border-radius:999px;margin-bottom:12px}
+  .hero h1{margin:0 0 8px;font-size:25px;line-height:1.35;font-weight:800}
+  .hero p{margin:0;font-size:14px;opacity:.92;max-width:30em}
+  .hero .meta-date{margin-top:14px;font-size:12px;opacity:.85}
+
+  /* ---------- TOC ---------- */
+  nav.toc{
+    margin:18px 0;background:var(--surface);border:1px solid var(--border);
+    border-radius:var(--radius);padding:14px 14px 6px;box-shadow:var(--shadow);
+  }
+  nav.toc h2{margin:0 0 10px;font-size:13px;color:var(--muted);letter-spacing:.04em;font-weight:700}
+  nav.toc ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  nav.toc a{
+    display:block;text-decoration:none;color:var(--text);font-size:13.5px;font-weight:600;
+    background:var(--surface-2);border:1px solid var(--border);border-radius:10px;
+    padding:9px 10px;line-height:1.3;
+  }
+  nav.toc a:active{background:var(--accent-soft)}
+
+  /* ---------- SECTION ---------- */
+  section{margin:30px 0}
+  .sec-head{display:flex;align-items:center;gap:10px;margin:0 0 4px}
+  .sec-head .ico{
+    width:34px;height:34px;flex:none;border-radius:10px;display:grid;place-items:center;
+    font-size:18px;background:var(--accent-soft);
+  }
+  .sec-head h2{margin:0;font-size:20px;font-weight:800;letter-spacing:.01em}
+  .sec-lead{margin:6px 2px 16px;color:var(--muted);font-size:14px}
+
+  /* ---------- CARD GRID OF PHRASES ---------- */
+  .phrases{display:grid;gap:10px}
+  @media(min-width:620px){.phrases{grid-template-columns:1fr 1fr}}
+  .ph{
+    background:var(--surface);border:1px solid var(--border);border-radius:14px;
+    padding:13px 14px;box-shadow:var(--shadow);position:relative;
+  }
+  .ph .en{margin:0;font-size:17px;font-weight:700;color:var(--en);line-height:1.4;letter-spacing:.005em}
+  .ph .ja{margin:3px 0 0;font-size:14px;color:var(--text)}
+  .ph .row{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+  .chip{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:999px;line-height:1.4}
+  .chip.scene{background:var(--accent-soft);color:var(--accent)}
+  .chip.note{background:var(--taxi-soft);color:#b07c12}
+  @media(prefers-color-scheme:dark){.chip.note{color:var(--taxi)}}
+
+  /* numbered (S-rank) */
+  .ph.num{padding-left:46px}
+  .ph .badge{
+    position:absolute;left:10px;top:12px;width:26px;height:26px;border-radius:8px;
+    background:var(--accent);color:#fff;font-size:13px;font-weight:800;display:grid;place-items:center;
+  }
+  .ph.star .badge{background:var(--taxi);color:#3a2a05}
+
+  /* ---------- 3-TIER STRUCTURE ---------- */
+  .tiers{display:grid;gap:12px}
+  @media(min-width:620px){.tiers{grid-template-columns:repeat(3,1fr)}}
+  .tier{
+    background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px;
+    box-shadow:var(--shadow);border-top:4px solid var(--accent);
+  }
+  .tier .t-num{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.06em}
+  .tier h3{margin:6px 0 4px;font-size:16px;font-weight:800}
+  .tier p{margin:0;font-size:13px;color:var(--muted)}
+  .tier:nth-child(2){border-top-color:var(--taxi)}
+  .tier:nth-child(2) .t-num{color:#b07c12}
+  .tier:nth-child(3){border-top-color:var(--ok)}
+  .tier:nth-child(3) .t-num{color:var(--ok)}
+
+  /* ---------- PRIORITY LADDER ---------- */
+  .ladder{display:grid;gap:8px}
+  .step{
+    display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);
+    border-radius:12px;padding:11px 14px;box-shadow:var(--shadow);
+  }
+  .step .n{
+    flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;
+    font-weight:800;display:grid;place-items:center;font-size:14px;
+  }
+  .step:nth-child(1) .n{background:var(--danger)}
+  .step:nth-child(2) .n{background:#d4761f}
+  .step:nth-child(3) .n{background:var(--taxi);color:#3a2a05}
+  .step .txt{font-size:14.5px;font-weight:600}
+
+  /* ---------- BASIC PATTERN SVG ---------- */
+  .flowcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:16px;box-shadow:var(--shadow)}
+  .flow-svg{width:100%;height:auto;display:block}
+  /* SVG theming via classes (reliable in Safari/Chrome, unlike var() in presentation attributes) */
+  .flow-svg .box{fill:var(--surface-2);stroke:var(--accent);stroke-width:1.5}
+  .flow-svg .t-en{fill:var(--en);font-size:17px;font-weight:700}
+  .flow-svg .t-ja{fill:var(--muted);font-size:12.5px}
+  .flow-svg .conn{stroke:var(--accent);stroke-width:1.6;fill:none}
+  .flow-svg .arrowhead{stroke:var(--accent);stroke-width:1.6;fill:none}
+
+  /* ---------- SHOW CARD (to display on phone) ---------- */
+  .showcard{
+    background:var(--surface);border:2px dashed var(--accent);border-radius:var(--radius);
+    padding:14px 16px;box-shadow:var(--shadow);
+  }
+  .showcard h3{margin:0 0 4px;font-size:14px;color:var(--accent);display:flex;align-items:center;gap:7px}
+  .showcard .line{padding:9px 0;border-bottom:1px solid var(--border)}
+  .showcard .line:last-child{border-bottom:none}
+  .showcard .l-en{font-size:16px;font-weight:700;color:var(--en);margin:0}
+  .showcard .l-ja{font-size:13px;color:var(--muted);margin:2px 0 0}
+  .showgrid{display:grid;gap:12px}
+  @media(min-width:620px){.showgrid{grid-template-columns:1fr 1fr}}
+
+  /* ---------- ACCORDION (scenes) ---------- */
+  details.scene{
+    background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-bottom:10px;
+    box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.scene>summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;
+    padding:14px 16px;font-weight:800;font-size:16px;
+  }
+  details.scene>summary::-webkit-details-marker{display:none}
+  details.scene>summary .s-ico{
+    width:32px;height:32px;flex:none;border-radius:9px;display:grid;place-items:center;font-size:17px;
+    background:var(--accent-soft);
+  }
+  details.scene>summary .s-arrow{margin-left:auto;color:var(--muted);transition:transform .2s;font-size:13px}
+  details.scene[open]>summary .s-arrow{transform:rotate(180deg)}
+  details.scene[open]>summary{border-bottom:1px solid var(--border)}
+  .scene-body{padding:12px 14px 16px}
+  .sub{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.05em;margin:14px 0 8px}
+  .sub:first-child{margin-top:2px}
+
+  /* compact phrase list inside accordion */
+  .plist{display:grid;gap:8px}
+  .pl{
+    background:var(--surface-2);border:1px solid var(--border);border-radius:11px;padding:10px 12px;
+  }
+  .pl .en{margin:0;font-size:15.5px;font-weight:700;color:var(--en);line-height:1.4}
+  .pl .ja{margin:2px 0 0;font-size:13px;color:var(--text)}
+  .pl .sc{margin:5px 0 0;font-size:11.5px;color:var(--muted)}
+  .pl .sc b{color:var(--accent);font-weight:700}
+
+  /* ---------- Q&A ---------- */
+  .qa{display:grid;gap:9px}
+  .qrow{background:var(--surface-2);border:1px solid var(--border);border-radius:11px;padding:11px 12px}
+  .qrow .ask{font-size:14.5px;font-weight:700;color:var(--text);margin:0}
+  .qrow .ask .mean{font-weight:400;color:var(--muted);font-size:12.5px}
+  .qrow .ans{margin:6px 0 0;font-size:14px;color:var(--ok);font-weight:700;display:flex;align-items:flex-start;gap:6px}
+  .qrow .ans::before{content:"→";color:var(--muted);font-weight:700}
+  @media(prefers-color-scheme:dark){.qrow .ans{color:var(--ok)}}
+
+  /* ---------- STRENGTH METER (refusals) ---------- */
+  .ref{display:grid;gap:9px}
+  .rrow{
+    display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;
+    background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:11px 13px;box-shadow:var(--shadow);
+  }
+  .rrow .ren{font-size:15.5px;font-weight:700;color:var(--en);margin:0;grid-column:1}
+  .rrow .rja{font-size:12.5px;color:var(--muted);margin:1px 0 0;grid-column:1}
+  .meter{grid-column:2;grid-row:1 / span 2;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+  .bars{display:flex;gap:3px}
+  .bars i{width:7px;height:16px;border-radius:2px;background:var(--border)}
+  .lvl-label{font-size:10.5px;font-weight:800;color:var(--muted)}
+  .s1 .bars i:nth-child(-n+1),.s1 .lvl-label{color:#3a9b66}
+  .s1 .bars i:nth-child(-n+1){background:#4cae7a}
+  .s2 .bars i:nth-child(-n+2){background:var(--taxi)}.s2 .lvl-label{color:#b07c12}
+  .s3 .bars i:nth-child(-n+3){background:#e07c2f}.s3 .lvl-label{color:#d4761f}
+  .s4 .bars i{background:var(--danger)}.s4 .lvl-label{color:var(--danger)}
+
+  /* ---------- RED LINE ---------- */
+  .redbox{background:var(--danger-soft);border:1px solid var(--danger);border-radius:var(--radius);
+    padding:14px 16px}
+  .redbox h3{margin:0 0 10px;color:var(--danger);font-size:15px;display:flex;align-items:center;gap:7px}
+  .swap{display:grid;gap:10px}
+  .swrow{background:var(--surface);border:1px solid var(--border);border-radius:11px;padding:11px 12px}
+  .swrow .bad{font-size:14.5px;font-weight:700;color:var(--danger);margin:0;text-decoration:line-through;text-decoration-color:rgba(200,69,61,.5)}
+  .swrow .reason{font-size:12px;color:var(--muted);margin:3px 0 6px}
+  .swrow .good{font-size:14.5px;font-weight:700;color:var(--ok);margin:0;display:flex;align-items:center;gap:6px}
+  .swrow .good::before{content:"✓";font-weight:800}
+
+  /* ---------- TEMPLATE ---------- */
+  .tpl{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--taxi);
+    border-radius:12px;padding:13px 15px;box-shadow:var(--shadow);margin-bottom:12px}
+  .tpl h3{margin:0 0 8px;font-size:15px;font-weight:800;display:flex;align-items:center;gap:8px}
+  .tpl .tnum{font-size:11px;background:var(--taxi-soft);color:#b07c12;padding:2px 8px;border-radius:999px}
+  @media(prefers-color-scheme:dark){.tpl .tnum{color:var(--taxi)}}
+  .tpl ol{margin:0;padding-left:0;list-style:none;counter-reset:t}
+  .tpl li{position:relative;padding:7px 0 7px 26px;border-bottom:1px solid var(--border)}
+  .tpl li:last-child{border-bottom:none}
+  .tpl li::before{counter-increment:t;content:counter(t);position:absolute;left:0;top:9px;
+    width:18px;height:18px;border-radius:50%;background:var(--taxi);color:#3a2a05;font-size:11px;font-weight:800;
+    display:grid;place-items:center}
+  .tpl .e{font-size:15.5px;font-weight:700;color:var(--en);display:block}
+  .tpl .j{font-size:12.5px;color:var(--muted)}
+
+  /* ---------- BASIS ---------- */
+  .basis{display:grid;gap:10px}
+  .bcard{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 15px;box-shadow:var(--shadow)}
+  .bcard h3{margin:0 0 6px;font-size:14px;font-weight:800;display:flex;align-items:center;gap:7px}
+  .bcard.fact h3{color:var(--accent)} .bcard.guess h3{color:#d4761f} .bcard.op h3{color:var(--ok)}
+  .bcard ul{margin:0;padding-left:18px} .bcard li{font-size:13.5px;margin:3px 0;color:var(--text)}
+  .conf{display:inline-flex;align-items:center;gap:6px;background:var(--ok-soft);color:var(--ok);
+    font-weight:800;font-size:13px;padding:6px 12px;border-radius:999px}
+
+  .note-inline{font-size:12.5px;color:var(--muted);background:var(--surface-2);border:1px solid var(--border);
+    border-radius:10px;padding:9px 12px;margin-top:10px}
+  .endline{text-align:center;color:var(--muted);font-size:12px;margin-top:34px;padding-top:18px;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <div class="hero">
+    <svg class="skyline" viewBox="0 0 200 90" aria-hidden="true" fill="#fff">
+      <rect x="6" y="40" width="16" height="50"/><rect x="26" y="55" width="14" height="35"/>
+      <rect x="44" y="20" width="18" height="70"/><rect x="58" y="12" width="4" height="14"/>
+      <rect x="66" y="48" width="14" height="42"/><rect x="84" y="30" width="16" height="60"/>
+      <rect x="104" y="58" width="13" height="32"/><rect x="121" y="36" width="17" height="54"/>
+      <rect x="142" y="50" width="14" height="40"/><rect x="160" y="22" width="16" height="68"/>
+      <rect x="168" y="14" width="4" height="10"/><rect x="180" y="60" width="14" height="30"/>
+    </svg>
+    <span class="tag">NYC ひとり旅 / 英語初心者向け</span>
+    <h1>ニューヨーク旅行<br>英語フレーズ図解</h1>
+    <p>「丸暗記」＋「スマホで見せる」＋「場面別に探す」の3段構成。事前取得チケットを前提に、入場・列・支払い・トラブル対応まで、現地で必要な順に再構成しています。</p>
+    <div class="meta-date">情報基準日：2026年6月26日</div>
+  </div>
+
+  <!-- ============ TOC ============ -->
+  <nav class="toc" aria-label="目次">
+    <h2>目次（タップで移動）</h2>
+    <ul>
+      <li><a href="#design">① 全体設計・優先順位</a></li>
+      <li><a href="#basic">② 基本の型</a></li>
+      <li><a href="#srank">③ Sランク30フレーズ</a></li>
+      <li><a href="#show">④ 見せる用カード</a></li>
+      <li><a href="#scenes">⑤ 場面別フレーズ</a></li>
+      <li><a href="#reply">⑥ 相手の英語と返答</a></li>
+      <li><a href="#levels">⑦ 優先順位別まとめ</a></li>
+      <li><a href="#redline">⑧ 避ける表現（赤ライン）</a></li>
+      <li><a href="#template">⑨ 実戦テンプレート</a></li>
+      <li><a href="#basis">⑩ 根拠・確度</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ ① DESIGN ============ -->
+  <section id="design">
+    <div class="sec-head"><span class="ico">🧭</span><h2>全体設計・優先順位</h2></div>
+    <p class="sec-lead">現地で最高に使いやすくするための3段構成と、覚える優先順位。</p>
+
+    <h3 style="font-size:14px;color:var(--muted);margin:0 0 10px">3段構成のしくみ</h3>
+    <div class="tiers">
+      <div class="tier">
+        <div class="t-num">STEP 1</div>
+        <h3>丸暗記する</h3>
+        <p>最優先のSランク30フレーズ。口から出るまで覚える。</p>
+      </div>
+      <div class="tier">
+        <div class="t-num">STEP 2</div>
+        <h3>スマホで見せる</h3>
+        <p>言葉が出ない時に画面ごと提示する「見せる用カード」。</p>
+      </div>
+      <div class="tier">
+        <div class="t-num">STEP 3</div>
+        <h3>場面別に探す</h3>
+        <p>残りは暗記せず、必要な場面で見返す・検索する。</p>
+      </div>
+    </div>
+
+    <div class="note-inline">全部を丸暗記するより、<b>Sランク30個だけ覚えて、残りはスマホで確認</b>する形が最も使いやすい。</div>
+
+    <h3 style="font-size:14px;color:var(--muted);margin:24px 0 10px">覚える優先順位</h3>
+    <div class="ladder">
+      <div class="step"><span class="n">1</span><span class="txt">チケット提示・入場確認</span></div>
+      <div class="step"><span class="n">2</span><span class="txt">聞き取れない時の対応</span></div>
+      <div class="step"><span class="n">3</span><span class="txt">道・列・ゲート・席の確認</span></div>
+      <div class="step"><span class="n">4</span><span class="txt">支払い・チップ・レシート</span></div>
+      <div class="step"><span class="n">5</span><span class="txt">トラブル時の短い説明</span></div>
+      <div class="step"><span class="n">6</span><span class="txt">勧誘・不審な声かけを断る</span></div>
+    </div>
+  </section>
+
+  <!-- ============ ② BASIC PATTERN ============ -->
+  <section id="basic">
+    <div class="sec-head"><span class="ico">🔁</span><h2>基本の型</h2></div>
+    <p class="sec-lead">英語で困ったら、毎回この順番で十分。指差し・スマホ提示と組み合わせる。</p>
+
+    <div class="flowcard">
+      <svg class="flow-svg" viewBox="0 0 320 360" role="img" aria-label="基本の型の4ステップ。1すみません Excuse me、2チケットを持っています I have a ticket、3手伝ってもらえますか Could you help me、4ゆっくり話してください Please speak slowly">
+        <g font-family="system-ui,sans-serif">
+          <g>
+            <rect class="box" x="20" y="10" width="280" height="62" rx="13"/>
+            <text class="t-en" x="36" y="38">Excuse me.</text>
+            <text class="t-ja" x="36" y="58">すみません</text>
+          </g>
+          <line class="conn" x1="160" y1="74" x2="160" y2="90"/>
+          <path class="arrowhead" d="M155,86 L160,92 L165,86"/>
+          <g>
+            <rect class="box" x="20" y="96" width="280" height="62" rx="13"/>
+            <text class="t-en" x="36" y="124">I have a ticket.</text>
+            <text class="t-ja" x="36" y="144">チケットを持っています</text>
+          </g>
+          <line class="conn" x1="160" y1="160" x2="160" y2="176"/>
+          <path class="arrowhead" d="M155,172 L160,178 L165,172"/>
+          <g>
+            <rect class="box" x="20" y="182" width="280" height="62" rx="13"/>
+            <text class="t-en" x="36" y="210">Could you help me?</text>
+            <text class="t-ja" x="36" y="230">手伝ってもらえますか？</text>
+          </g>
+          <line class="conn" x1="160" y1="246" x2="160" y2="262"/>
+          <path class="arrowhead" d="M155,258 L160,264 L165,258"/>
+          <g>
+            <rect class="box" x="20" y="268" width="280" height="62" rx="13"/>
+            <text class="t-en" x="36" y="296">Please speak slowly.</text>
+            <text class="t-ja" x="36" y="316">ゆっくり話してください</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <h3 class="sub" style="margin-top:22px">スマホを見せながら使う型</h3>
+    <div class="plist">
+      <div class="pl"><p class="en">This one, please.</p><p class="ja">これです</p><p class="sc"><b>場面</b> メニュー・地図・チケットを指す</p></div>
+      <div class="pl"><p class="en">Here is my ticket.</p><p class="ja">チケットはこちらです</p><p class="sc"><b>場面</b> 入場時</p></div>
+      <div class="pl"><p class="en">Here is my reservation.</p><p class="ja">予約はこちらです</p><p class="sc"><b>場面</b> ホテル・レストラン</p></div>
+      <div class="pl"><p class="en">I’m going here.</p><p class="ja">ここに行きます</p><p class="sc"><b>場面</b> タクシー・道案内</p></div>
+      <div class="pl"><p class="en">I’m looking for this place.</p><p class="ja">この場所を探しています</p><p class="sc"><b>場面</b> 道に迷った時</p></div>
+      <div class="pl"><p class="en">Can you show me on the map?</p><p class="ja">地図で教えてもらえますか？</p><p class="sc"><b>場面</b> 道案内</p></div>
+      <div class="pl"><p class="en">Can you scan this?</p><p class="ja">これをスキャンできますか？</p><p class="sc"><b>場面</b> QRコード提示</p></div>
+      <div class="pl"><p class="en">My ticket is on my phone.</p><p class="ja">チケットはスマホに入っています</p><p class="sc"><b>場面</b> 入場時</p></div>
+      <div class="pl"><p class="en">I have it in Google Wallet.</p><p class="ja">Googleウォレットに入っています</p><p class="sc"><b>場面</b> チケット提示</p></div>
+      <div class="pl"><p class="en">One moment, please.</p><p class="ja">少し待ってください</p><p class="sc"><b>場面</b> スマホ操作中</p></div>
+    </div>
+  </section>
+
+  <!-- ============ ③ S-RANK 30 ============ -->
+  <section id="srank">
+    <div class="sec-head"><span class="ico">⭐</span><h2>Sランク：最優先30フレーズ</h2></div>
+    <p class="sec-lead">これだけ覚えておけば、かなり対応できる。★は特に重要。</p>
+    <div class="phrases">
+      <div class="ph num star"><span class="badge">1</span><p class="en">Excuse me.</p><p class="ja">すみません</p><div class="row"><span class="chip scene">話しかける時</span><span class="chip note">最重要</span></div></div>
+      <div class="ph num"><span class="badge">2</span><p class="en">Sorry.</p><p class="ja">すみません</p><div class="row"><span class="chip scene">軽い謝罪</span><span class="chip note">ぶつかった時</span></div></div>
+      <div class="ph num"><span class="badge">3</span><p class="en">Thank you.</p><p class="ja">ありがとう</p><div class="row"><span class="chip scene">すべて</span><span class="chip note">基本</span></div></div>
+      <div class="ph num"><span class="badge">4</span><p class="en">No, thank you.</p><p class="ja">いいえ、けっこうです</p><div class="row"><span class="chip scene">勧誘を断る</span><span class="chip note">丁寧</span></div></div>
+      <div class="ph num"><span class="badge">5</span><p class="en">Yes, please.</p><p class="ja">はい、お願いします</p><div class="row"><span class="chip scene">何かを頼む</span><span class="chip note">丁寧</span></div></div>
+      <div class="ph num"><span class="badge">6</span><p class="en">I’m good, thanks.</p><p class="ja">大丈夫です、ありがとう</p><div class="row"><span class="chip scene">勧誘を断る</span><span class="chip note">NYCで自然</span></div></div>
+      <div class="ph num"><span class="badge">7</span><p class="en">My English is not good.</p><p class="ja">英語が得意ではありません</p><div class="row"><span class="chip scene">困った時</span><span class="chip note">最初に言う</span></div></div>
+      <div class="ph num star"><span class="badge">8</span><p class="en">Please speak slowly.</p><p class="ja">ゆっくり話してください</p><div class="row"><span class="chip scene">聞き取れない時</span><span class="chip note">最重要</span></div></div>
+      <div class="ph num"><span class="badge">9</span><p class="en">Could you say that again?</p><p class="ja">もう一度言ってもらえますか？</p><div class="row"><span class="chip scene">聞き返し</span><span class="chip note">丁寧</span></div></div>
+      <div class="ph num"><span class="badge">10</span><p class="en">Could you say it more simply?</p><p class="ja">もっと簡単に言ってもらえますか？</p><div class="row"><span class="chip scene">説明が難しい時</span><span class="chip note">実用的</span></div></div>
+      <div class="ph num"><span class="badge">11</span><p class="en">Could you write it down?</p><p class="ja">書いてもらえますか？</p><div class="row"><span class="chip scene">聞き取れない時</span><span class="chip note">便利</span></div></div>
+      <div class="ph num star"><span class="badge">12</span><p class="en">Could you help me?</p><p class="ja">手伝ってもらえますか？</p><div class="row"><span class="chip scene">困った時</span><span class="chip note">万能</span></div></div>
+      <div class="ph num"><span class="badge">13</span><p class="en">I need help.</p><p class="ja">助けが必要です</p><div class="row"><span class="chip scene">トラブル時</span><span class="chip note">短く強い</span></div></div>
+      <div class="ph num"><span class="badge">14</span><p class="en">I don’t understand.</p><p class="ja">分かりません</p><div class="row"><span class="chip scene">聞き取れない時</span><span class="chip note">基本</span></div></div>
+      <div class="ph num"><span class="badge">15</span><p class="en">One moment, please.</p><p class="ja">少し待ってください</p><div class="row"><span class="chip scene">スマホ操作中</span><span class="chip note">丁寧</span></div></div>
+      <div class="ph num"><span class="badge">16</span><p class="en">Just a moment.</p><p class="ja">少し待ってください</p><div class="row"><span class="chip scene">レストラン等</span><span class="chip note">自然</span></div></div>
+      <div class="ph num star"><span class="badge">17</span><p class="en">Where is the restroom?</p><p class="ja">トイレはどこですか？</p><div class="row"><span class="chip scene">どこでも</span><span class="chip note">最重要</span></div></div>
+      <div class="ph num"><span class="badge">18</span><p class="en">Where is the entrance?</p><p class="ja">入口はどこですか？</p><div class="row"><span class="chip scene">施設前</span><span class="chip note">美術館・劇場・球場</span></div></div>
+      <div class="ph num"><span class="badge">19</span><p class="en">Where is the exit?</p><p class="ja">出口はどこですか？</p><div class="row"><span class="chip scene">施設内</span><span class="chip note">exit</span></div></div>
+      <div class="ph num star"><span class="badge">20</span><p class="en">Is this the right line?</p><p class="ja">この列で合っていますか？</p><div class="row"><span class="chip scene">入場前</span><span class="chip note">超重要</span></div></div>
+      <div class="ph num star"><span class="badge">21</span><p class="en">I have a ticket.</p><p class="ja">チケットを持っています</p><div class="row"><span class="chip scene">入場時</span><span class="chip note">事前取得前提</span></div></div>
+      <div class="ph num star"><span class="badge">22</span><p class="en">Here is my ticket.</p><p class="ja">チケットはこちらです</p><div class="row"><span class="chip scene">入場時</span><span class="chip note">スマホ提示</span></div></div>
+      <div class="ph num"><span class="badge">23</span><p class="en">Can you scan this?</p><p class="ja">これをスキャンできますか？</p><div class="row"><span class="chip scene">QR提示</span><span class="chip note">入場時</span></div></div>
+      <div class="ph num"><span class="badge">24</span><p class="en">My ticket is on my phone.</p><p class="ja">チケットはスマホに入っています</p><div class="row"><span class="chip scene">入場時</span><span class="chip note">Googleウォレット等</span></div></div>
+      <div class="ph num"><span class="badge">25</span><p class="en">My ticket won’t load.</p><p class="ja">チケットが表示されません</p><div class="row"><span class="chip scene">チケットトラブル</span><span class="chip note">重要</span></div></div>
+      <div class="ph num"><span class="badge">26</span><p class="en">Can I step aside for a moment?</p><p class="ja">少し横にずれてもいいですか？</p><div class="row"><span class="chip scene">入場列</span><span class="chip note">焦らないため</span></div></div>
+      <div class="ph num star"><span class="badge">27</span><p class="en">Can I pay by card?</p><p class="ja">カードで払えますか？</p><div class="row"><span class="chip scene">支払い</span><span class="chip note">万能</span></div></div>
+      <div class="ph num"><span class="badge">28</span><p class="en">Can I get a receipt?</p><p class="ja">レシートをもらえますか？</p><div class="row"><span class="chip scene">支払い後</span><span class="chip note">便利</span></div></div>
+      <div class="ph num"><span class="badge">29</span><p class="en">Could you take a photo of me?</p><p class="ja">写真を撮ってもらえますか？</p><div class="row"><span class="chip scene">観光地</span><span class="chip note">一人旅で重要</span></div></div>
+      <div class="ph num star"><span class="badge">30</span><p class="en">Please call 911.</p><p class="ja">911に電話してください</p><div class="row"><span class="chip scene">緊急時</span><span class="chip note">最終手段</span></div></div>
+    </div>
+  </section>
+
+  <!-- ============ ④ SHOW CARDS ============ -->
+  <section id="show">
+    <div class="sec-head"><span class="ico">📱</span><h2>スマホに保存する「見せる用カード」</h2></div>
+    <p class="sec-lead">英語が出てこない時は、これをそのまま画面で見せればよい。</p>
+    <div class="showgrid">
+      <div class="showcard">
+        <h3>💬 通常版</h3>
+        <div class="line"><p class="l-en">I’m visiting New York from Japan.</p><p class="l-ja">日本からニューヨークに旅行で来ています。</p></div>
+        <div class="line"><p class="l-en">My English is not good.</p><p class="l-ja">英語が得意ではありません。</p></div>
+        <div class="line"><p class="l-en">Please speak slowly and use simple English.</p><p class="l-ja">ゆっくり、簡単な英語で話してください。</p></div>
+        <div class="line"><p class="l-en">Could you help me?</p><p class="l-ja">手伝ってもらえますか？</p></div>
+      </div>
+      <div class="showcard">
+        <h3>🎫 チケット提示版</h3>
+        <div class="line"><p class="l-en">I have a ticket.</p><p class="l-ja">チケットを持っています。</p></div>
+        <div class="line"><p class="l-en">My ticket is on my phone.</p><p class="l-ja">チケットはスマホに入っています。</p></div>
+        <div class="line"><p class="l-en">I have it in Google Wallet.</p><p class="l-ja">Googleウォレットに入っています。</p></div>
+        <div class="line"><p class="l-en">Can you scan this?</p><p class="l-ja">これをスキャンできますか？</p></div>
+        <div class="line"><p class="l-en">If this does not work, could you help me?</p><p class="l-ja">うまく表示・読取できない場合、手伝ってもらえますか？</p></div>
+      </div>
+      <div class="showcard">
+        <h3>🗺️ 迷子・道案内版</h3>
+        <div class="line"><p class="l-en">I’m looking for this place.</p><p class="l-ja">この場所を探しています。</p></div>
+        <div class="line"><p class="l-en">Could you show me on the map?</p><p class="l-ja">地図で教えてもらえますか？</p></div>
+        <div class="line"><p class="l-en">Can I walk there?</p><p class="l-ja">歩いて行けますか？</p></div>
+        <div class="line"><p class="l-en">Is it safe to walk there?</p><p class="l-ja">そこまで歩いて安全ですか？</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ⑤ SCENES ============ -->
+  <section id="scenes">
+    <div class="sec-head"><span class="ico">🎯</span><h2>場面別フレーズ</h2></div>
+    <p class="sec-lead">タップで開閉。必要な場面だけ見返す。</p>
+
+    <!-- 1 TAXI -->
+    <details class="scene">
+      <summary><span class="s-ico">🚕</span>1. タクシー・配車<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">まず使う表現</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Can you take me to this address?</p><p class="ja">この住所までお願いします</p><p class="sc"><b>乗車時</b> スマホで住所を見せる</p></div>
+          <div class="pl"><p class="en">I’m going to this hotel.</p><p class="ja">このホテルに行きます</p><p class="sc"><b>ホテルへ</b> ホテル名を見せる</p></div>
+          <div class="pl"><p class="en">Here is the address.</p><p class="ja">住所はこちらです</p><p class="sc"><b>乗車時</b> 画面提示</p></div>
+          <div class="pl"><p class="en">How long will it take?</p><p class="ja">どれくらいかかりますか？</p><p class="sc"><b>所要時間</b> 渋滞時</p></div>
+          <div class="pl"><p class="en">How much will it be?</p><p class="ja">いくらくらいですか？</p><p class="sc"><b>料金確認</b> 概算</p></div>
+          <div class="pl"><p class="en">Here is fine.</p><p class="ja">ここで大丈夫です</p><p class="sc"><b>降車時</b> 短く自然</p></div>
+          <div class="pl"><p class="en">Could you drop me off here?</p><p class="ja">ここで降ろしてください</p><p class="sc"><b>降車時</b> 丁寧</p></div>
+          <div class="pl"><p class="en">Can I pay by card?</p><p class="ja">カードで払えますか？</p><p class="sc"><b>支払い</b> 基本</p></div>
+          <div class="pl"><p class="en">Can I get a receipt?</p><p class="ja">レシートをもらえますか？</p><p class="sc"><b>支払い後</b> 必要なら</p></div>
+          <div class="pl"><p class="en">Can you open the trunk?</p><p class="ja">トランクを開けてもらえますか？</p><p class="sc"><b>荷物あり</b> trunk＝荷室</p></div>
+        </div>
+        <div class="sub">追加で便利</div>
+        <div class="plist">
+          <div class="pl"><p class="en">I have luggage.</p><p class="ja">荷物があります</p><p class="sc"><b>乗車前</b></p></div>
+          <div class="pl"><p class="en">Please use the meter.</p><p class="ja">メーターでお願いします</p><p class="sc"><b>通常タクシー</b></p></div>
+          <div class="pl"><p class="en">I’m in a hurry.</p><p class="ja">急いでいます</p><p class="sc"><b>時間がない時</b></p></div>
+          <div class="pl"><p class="en">Please drive safely.</p><p class="ja">安全運転でお願いします</p><p class="sc"><b>運転が荒い時</b></p></div>
+          <div class="pl"><p class="en">I’ll tip on the card.</p><p class="ja">チップはカードで払います</p><p class="sc"><b>支払い時</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 2 HOTEL -->
+    <details class="scene">
+      <summary><span class="s-ico">🏨</span>2. ホテル<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">チェックイン・荷物</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Hi, I have a reservation.</p><p class="ja">予約しています</p><p class="sc"><b>チェックイン</b> 最初の一言</p></div>
+          <div class="pl"><p class="en">My name is Yuki.</p><p class="ja">名前はゆうきです</p><p class="sc"><b>予約確認</b> パスポート提示</p></div>
+          <div class="pl"><p class="en">Here is my passport.</p><p class="ja">パスポートです</p><p class="sc"><b>本人確認</b> 渡しながら</p></div>
+          <div class="pl"><p class="en">Here is my credit card.</p><p class="ja">クレジットカードです</p><p class="sc"><b>デポジット</b> よくある</p></div>
+          <div class="pl"><p class="en">Can I check in now?</p><p class="ja">今チェックインできますか？</p><p class="sc"><b>早く着いた時</b></p></div>
+          <div class="pl"><p class="en">Can I leave my bags here?</p><p class="ja">荷物を預けられますか？</p><p class="sc"><b>前後</b> 重要</p></div>
+          <div class="pl"><p class="en">What time is check-in?</p><p class="ja">チェックインは何時ですか？</p><p class="sc"><b>到着時</b></p></div>
+          <div class="pl"><p class="en">What time is check-out?</p><p class="ja">チェックアウトは何時ですか？</p><p class="sc"><b>滞在中</b></p></div>
+          <div class="pl"><p class="en">Can I get a late check-out?</p><p class="ja">レイトチェックアウトできますか？</p><p class="sc"><b>出発日</b> 可能なら</p></div>
+          <div class="pl"><p class="en">Can you call a taxi for me?</p><p class="ja">タクシーを呼んでもらえますか？</p><p class="sc"><b>出発時</b> フロントへ</p></div>
+        </div>
+        <div class="sub">部屋トラブル</div>
+        <div class="plist">
+          <div class="pl"><p class="en">My room key doesn’t work.</p><p class="ja">ルームキーが使えません</p><p class="sc"><b>フロント</b></p></div>
+          <div class="pl"><p class="en">I’m locked out.</p><p class="ja">部屋に入れません</p><p class="sc"><b>キー不具合</b></p></div>
+          <div class="pl"><p class="en">The Wi-Fi is not working.</p><p class="ja">Wi-Fiがつながりません</p><p class="sc"><b>部屋</b></p></div>
+          <div class="pl"><p class="en">There is no hot water.</p><p class="ja">お湯が出ません</p><p class="sc"><b>部屋</b></p></div>
+          <div class="pl"><p class="en">The air conditioner is not working.</p><p class="ja">エアコンが動きません</p><p class="sc"><b>部屋</b></p></div>
+          <div class="pl"><p class="en">The room is too noisy.</p><p class="ja">部屋がうるさいです</p><p class="sc"><b>部屋</b></p></div>
+          <div class="pl"><p class="en">Can I change rooms?</p><p class="ja">部屋を変えられますか？</p><p class="sc"><b>トラブル時</b></p></div>
+          <div class="pl"><p class="en">The toilet is clogged.</p><p class="ja">トイレが詰まっています</p><p class="sc"><b>部屋</b></p></div>
+          <div class="pl"><p class="en">Can I get extra towels?</p><p class="ja">タオルを追加でもらえますか？</p><p class="sc"><b>客室</b></p></div>
+          <div class="pl"><p class="en">Could you send someone to my room?</p><p class="ja">部屋に誰か来てもらえますか？</p><p class="sc"><b>修理依頼</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 3 SUBWAY -->
+    <details class="scene">
+      <summary><span class="s-ico">🚇</span>3. 地下鉄・移動<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">駅・電車確認</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Where is the subway station?</p><p class="ja">地下鉄の駅はどこですか？</p><p class="sc"><b>駅探し</b> subway</p></div>
+          <div class="pl"><p class="en">Which way to the subway?</p><p class="ja">地下鉄はどちらですか？</p><p class="sc"><b>道案内</b> 短い</p></div>
+          <div class="pl"><p class="en">Does this train go to Times Square?</p><p class="ja">この電車はタイムズスクエアに行きますか？</p><p class="sc"><b>乗車前</b> 地名を変える</p></div>
+          <div class="pl"><p class="en">Is this the uptown train?</p><p class="ja">これはアップタウン行きですか？</p><p class="sc"><b>方向確認</b> 北方面</p></div>
+          <div class="pl"><p class="en">Is this the downtown train?</p><p class="ja">これはダウンタウン行きですか？</p><p class="sc"><b>方向確認</b> 南方面</p></div>
+          <div class="pl"><p class="en">Which train should I take?</p><p class="ja">どの電車に乗ればいいですか？</p><p class="sc"><b>迷った時</b> 万能</p></div>
+          <div class="pl"><p class="en">Which platform should I use?</p><p class="ja">どのホームですか？</p><p class="sc"><b>駅構内</b> platform</p></div>
+          <div class="pl"><p class="en">Is this the right platform?</p><p class="ja">このホームで合っていますか？</p><p class="sc"><b>乗車前</b> 確認</p></div>
+          <div class="pl"><p class="en">Do I need to transfer?</p><p class="ja">乗り換えが必要ですか？</p><p class="sc"><b>経路確認</b> transfer</p></div>
+          <div class="pl"><p class="en">How many stops?</p><p class="ja">何駅ですか？</p><p class="sc"><b>所要確認</b> 短い</p></div>
+        </div>
+        <div class="sub">NYC地下鉄で特に重要</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Is this express or local?</p><p class="ja">これは急行ですか？各駅ですか？</p><p class="sc"><b>停車確認</b></p></div>
+          <div class="pl"><p class="en">I need the local train.</p><p class="ja">各駅停車に乗りたいです</p><p class="sc"><b>各駅に乗る時</b></p></div>
+          <div class="pl"><p class="en">Can I tap my credit card here?</p><p class="ja">ここでカードをタッチできますか？</p><p class="sc"><b>改札</b></p></div>
+          <div class="pl"><p class="en">My card didn’t work.</p><p class="ja">カードが反応しませんでした</p><p class="sc"><b>改札トラブル</b></p></div>
+          <div class="pl"><p class="en">Is it safe to take this train at night?</p><p class="ja">夜にこの電車に乗っても安全ですか？</p><p class="sc"><b>夜移動前</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 4 RESTAURANT -->
+    <details class="scene">
+      <summary><span class="s-ico">🍽️</span>4. レストラン<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">入店・注文</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Table for one, please.</p><p class="ja">1人です</p><p class="sc"><b>入店時</b> 一人旅で最重要</p></div>
+          <div class="pl"><p class="en">I have a reservation.</p><p class="ja">予約しています</p><p class="sc"><b>入店時</b> 予約あり</p></div>
+          <div class="pl"><p class="en">I don’t have a reservation.</p><p class="ja">予約していません</p><p class="sc"><b>入店時</b> 予約なし</p></div>
+          <div class="pl"><p class="en">Can I sit at the bar?</p><p class="ja">カウンター席に座れますか？</p><p class="sc"><b>一人利用</b> 自然</p></div>
+          <div class="pl"><p class="en">Can I see the menu?</p><p class="ja">メニューを見せてもらえますか？</p><p class="sc"><b>着席後</b> 基本</p></div>
+          <div class="pl"><p class="en">What do you recommend?</p><p class="ja">おすすめは何ですか？</p><p class="sc"><b>注文前</b> 万能</p></div>
+          <div class="pl"><p class="en">I’m ready to order.</p><p class="ja">注文できます</p><p class="sc"><b>店員を呼ぶ</b> 手を軽く上げて</p></div>
+          <div class="pl"><p class="en">I need a little more time.</p><p class="ja">もう少し時間がほしいです</p><p class="sc"><b>まだ決まらない時</b></p></div>
+          <div class="pl"><p class="en">I’ll have this.</p><p class="ja">これにします</p><p class="sc"><b>メニュー指差し</b></p></div>
+          <div class="pl"><p class="en">Can I get this?</p><p class="ja">これをください</p><p class="sc"><b>注文時</b> 自然</p></div>
+        </div>
+        <div class="sub">食事中・会計</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Can I get water, please?</p><p class="ja">水をもらえますか？</p><p class="sc"><b>着席後</b></p></div>
+          <div class="pl"><p class="en">Tap water, please.</p><p class="ja">水道水でお願いします</p><p class="sc"><b>無料水</b></p></div>
+          <div class="pl"><p class="en">No ice, please.</p><p class="ja">氷なしでお願いします</p><p class="sc"><b>飲み物</b></p></div>
+          <div class="pl"><p class="en">On the side, please.</p><p class="ja">別添えでお願いします</p><p class="sc"><b>ソース等</b></p></div>
+          <div class="pl"><p class="en">Not spicy, please.</p><p class="ja">辛くしないでください</p><p class="sc"><b>注文</b></p></div>
+          <div class="pl"><p class="en">Is this enough for one person?</p><p class="ja">これは1人分ですか？</p><p class="sc"><b>量確認</b> 一人旅向き</p></div>
+          <div class="pl"><p class="en">Can I get a box?</p><p class="ja">持ち帰り用の箱をください</p><p class="sc"><b>食後</b></p></div>
+          <div class="pl"><p class="en">Can I get the check, please?</p><p class="ja">お会計をお願いします</p><p class="sc"><b>支払い時</b> 米国では check</p></div>
+          <div class="pl"><p class="en">Is tip included?</p><p class="ja">チップは含まれていますか？</p><p class="sc"><b>会計時</b> 重要</p></div>
+          <div class="pl"><p class="en">Everything is good.</p><p class="ja">すべて大丈夫です</p><p class="sc"><b>食事中</b> “How is everything?”への返答</p></div>
+        </div>
+        <div class="sub">誤配膳・トラブル</div>
+        <div class="plist">
+          <div class="pl"><p class="en">I think this is not mine.</p><p class="ja">これは私のものではないと思います</p><p class="sc"><b>誤配膳</b></p></div>
+          <div class="pl"><p class="en">I ordered this.</p><p class="ja">これを注文しました</p><p class="sc"><b>注文確認</b></p></div>
+          <div class="pl"><p class="en">I didn’t order this.</p><p class="ja">これは注文していません</p><p class="sc"><b>誤配膳</b></p></div>
+          <div class="pl"><p class="en">Could you check the bill?</p><p class="ja">請求書を確認してもらえますか？</p><p class="sc"><b>会計ミス</b></p></div>
+          <div class="pl"><p class="en">The total seems wrong.</p><p class="ja">合計が違う気がします</p><p class="sc"><b>会計時</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 5 MUSEUM -->
+    <details class="scene">
+      <summary><span class="s-ico">🖼️</span>5. 美術館<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">入館・チケット</div>
+        <div class="plist">
+          <div class="pl"><p class="en">I have a ticket.</p><p class="ja">チケットを持っています</p><p class="sc"><b>入館時</b> スマホ提示</p></div>
+          <div class="pl"><p class="en">I have a ticket for 10 a.m.</p><p class="ja">10時のチケットを持っています</p><p class="sc"><b>時間指定</b> 時刻を変える</p></div>
+          <div class="pl"><p class="en">Here is my ticket.</p><p class="ja">チケットはこちらです</p><p class="sc"><b>入館時</b> ウォレット等</p></div>
+          <div class="pl"><p class="en">Can you scan this?</p><p class="ja">これをスキャンできますか？</p><p class="sc"><b>QR提示</b></p></div>
+          <div class="pl"><p class="en">Is this the line for ticket holders?</p><p class="ja">これはチケット保持者の列ですか？</p><p class="sc"><b>列確認</b> 重要</p></div>
+          <div class="pl"><p class="en">Where is the entrance?</p><p class="ja">入口はどこですか？</p><p class="sc"><b>建物前</b></p></div>
+          <div class="pl"><p class="en">Where is the coat check?</p><p class="ja">クロークはどこですか？</p><p class="sc"><b>荷物預け</b> coat check</p></div>
+          <div class="pl"><p class="en">Do I need to check my bag?</p><p class="ja">バッグを預ける必要がありますか？</p><p class="sc"><b>入館時</b></p></div>
+          <div class="pl"><p class="en">Can I re-enter later?</p><p class="ja">後で再入場できますか？</p><p class="sc"><b>一時退出</b> re-enter</p></div>
+          <div class="pl"><p class="en">Where is the museum map?</p><p class="ja">館内マップはどこですか？</p><p class="sc"><b>入館後</b></p></div>
+        </div>
+        <div class="sub">館内</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Where is this painting?</p><p class="ja">この絵はどこですか？</p><p class="sc"><b>作品探し</b></p></div>
+          <div class="pl"><p class="en">Could you show me on the map?</p><p class="ja">地図で教えてもらえますか？</p><p class="sc"><b>作品探し</b></p></div>
+          <div class="pl"><p class="en">Do you have an audio guide in Japanese?</p><p class="ja">日本語の音声ガイドはありますか？</p><p class="sc"><b>受付</b></p></div>
+          <div class="pl"><p class="en">Can I take photos here?</p><p class="ja">ここで写真を撮れますか？</p><p class="sc"><b>展示室</b></p></div>
+          <div class="pl"><p class="en">No flash, right?</p><p class="ja">フラッシュなしですよね？</p><p class="sc"><b>撮影確認</b></p></div>
+          <div class="pl"><p class="en">Where is the gift shop?</p><p class="ja">ミュージアムショップはどこですか？</p><p class="sc"><b>買い物</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 6 MUSICAL -->
+    <details class="scene">
+      <summary><span class="s-ico">🎭</span>6. ミュージカル<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">入場・座席</div>
+        <div class="plist">
+          <div class="pl"><p class="en">I have a ticket.</p><p class="ja">チケットを持っています</p><p class="sc"><b>劇場入口</b> スマホ提示</p></div>
+          <div class="pl"><p class="en">Here is my ticket.</p><p class="ja">チケットはこちらです</p><p class="sc"><b>入場時</b></p></div>
+          <div class="pl"><p class="en">Can you scan this?</p><p class="ja">これをスキャンできますか？</p><p class="sc"><b>入場時</b> QR提示</p></div>
+          <div class="pl"><p class="en">Is this the line for this show?</p><p class="ja">これはこの公演の列ですか？</p><p class="sc"><b>開場前</b> 劇場前で便利</p></div>
+          <div class="pl"><p class="en">What time do the doors open?</p><p class="ja">開場は何時ですか？</p><p class="sc"><b>早く着いた時</b> doors open</p></div>
+          <div class="pl"><p class="en">What time does the show start?</p><p class="ja">開演は何時ですか？</p><p class="sc"><b>開演確認</b> start</p></div>
+          <div class="pl"><p class="en">Where is my seat?</p><p class="ja">私の席はどこですか？</p><p class="sc"><b>入場後</b> 席探し</p></div>
+          <div class="pl"><p class="en">Could you help me find my seat?</p><p class="ja">席を探すのを手伝ってもらえますか？</p><p class="sc"><b>案内係へ</b> 丁寧</p></div>
+          <div class="pl"><p class="en">Is there an intermission?</p><p class="ja">休憩はありますか？</p><p class="sc"><b>公演前</b> intermission</p></div>
+          <div class="pl"><p class="en">How long is the show?</p><p class="ja">上演時間はどれくらいですか？</p><p class="sc"><b>予定確認</b> 終演時間</p></div>
+        </div>
+        <div class="sub">劇場内</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Can I bring this inside?</p><p class="ja">これを中に持ち込めますか？</p><p class="sc"><b>入場時</b></p></div>
+          <div class="pl"><p class="en">Can I take photos here?</p><p class="ja">ここで写真を撮れますか？</p><p class="sc"><b>ロビー等</b></p></div>
+          <div class="pl"><p class="en">Are photos allowed before the show?</p><p class="ja">開演前の写真は可能ですか？</p><p class="sc"><b>客席</b></p></div>
+          <div class="pl"><p class="en">Where can I buy a program?</p><p class="ja">パンフレットはどこで買えますか？</p><p class="sc"><b>グッズ購入</b></p></div>
+          <div class="pl"><p class="en">That was amazing.</p><p class="ja">すばらしかったです</p><p class="sc"><b>終演後</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 7 MLB -->
+    <details class="scene">
+      <summary><span class="s-ico">⚾</span>7. MLB観戦<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">入場・席</div>
+        <div class="plist">
+          <div class="pl"><p class="en">I have a ticket.</p><p class="ja">チケットを持っています</p><p class="sc"><b>入場時</b> スマホ提示</p></div>
+          <div class="pl"><p class="en">Here is my ticket.</p><p class="ja">チケットはこちらです</p><p class="sc"><b>入場ゲート</b></p></div>
+          <div class="pl"><p class="en">Which gate should I use?</p><p class="ja">どのゲートを使えばいいですか？</p><p class="sc"><b>球場前</b> gate確認</p></div>
+          <div class="pl"><p class="en">Where is Gate 6?</p><p class="ja">6番ゲートはどこですか？</p><p class="sc"><b>球場前</b> 番号を変える</p></div>
+          <div class="pl"><p class="en">Is this the right gate?</p><p class="ja">このゲートで合っていますか？</p><p class="sc"><b>入場前</b></p></div>
+          <div class="pl"><p class="en">Can I bring this bag in?</p><p class="ja">このバッグは持ち込めますか？</p><p class="sc"><b>手荷物検査</b> 重要</p></div>
+          <div class="pl"><p class="en">Where is my section?</p><p class="ja">私のセクションはどこですか？</p><p class="sc"><b>入場後</b> 席探し</p></div>
+          <div class="pl"><p class="en">Which way to Section 123?</p><p class="ja">123セクションはどちらですか？</p><p class="sc"><b>球場内</b> 数字を変える</p></div>
+          <div class="pl"><p class="en">Could you help me find my seat?</p><p class="ja">席を探すのを手伝ってもらえますか？</p><p class="sc"><b>係員へ</b> 丁寧</p></div>
+          <div class="pl"><p class="en">Where is the team store?</p><p class="ja">チームショップはどこですか？</p><p class="sc"><b>グッズ購入</b> Yankees等</p></div>
+        </div>
+        <div class="sub">試合中・売店</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Can I get a hot dog?</p><p class="ja">ホットドッグをください</p><p class="sc"><b>売店</b></p></div>
+          <div class="pl"><p class="en">Can I get a bottle of water?</p><p class="ja">水を1本ください</p><p class="sc"><b>売店</b></p></div>
+          <div class="pl"><p class="en">What inning is it?</p><p class="ja">今、何回ですか？</p><p class="sc"><b>試合中</b></p></div>
+          <div class="pl"><p class="en">What’s the score?</p><p class="ja">スコアは何対何ですか？</p><p class="sc"><b>試合中</b></p></div>
+          <div class="pl"><p class="en">Who is pitching?</p><p class="ja">誰が投げていますか？</p><p class="sc"><b>試合中</b></p></div>
+          <div class="pl"><p class="en">Can I take a photo here?</p><p class="ja">ここで写真を撮ってもいいですか？</p><p class="sc"><b>球場内</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 8 STATUE OF LIBERTY -->
+    <details class="scene">
+      <summary><span class="s-ico">🗽</span>8. 自由の女神・フェリー<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">乗船・入場</div>
+        <div class="plist">
+          <div class="pl"><p class="en">I have a ticket.</p><p class="ja">チケットを持っています</p><p class="sc"><b>フェリー乗船前</b> 公式チケット</p></div>
+          <div class="pl"><p class="en">I have a pedestal ticket.</p><p class="ja">台座入場チケットを持っています</p><p class="sc"><b>入場確認</b> pedestal</p></div>
+          <div class="pl"><p class="en">Here is my ticket.</p><p class="ja">チケットはこちらです</p><p class="sc"><b>係員へ</b> スマホ提示</p></div>
+          <div class="pl"><p class="en">Where is the line for Liberty Island?</p><p class="ja">リバティ島行きの列はどこですか？</p><p class="sc"><b>乗船前</b> 重要</p></div>
+          <div class="pl"><p class="en">Is this the line for the ferry?</p><p class="ja">これはフェリーの列ですか？</p><p class="sc"><b>列確認</b> 短い</p></div>
+          <div class="pl"><p class="en">Where is security?</p><p class="ja">セキュリティチェックはどこですか？</p><p class="sc"><b>乗船前</b> security</p></div>
+          <div class="pl"><p class="en">Is this ferry going to Liberty Island?</p><p class="ja">このフェリーはリバティ島に行きますか？</p><p class="sc"><b>乗船前</b> 行先確認</p></div>
+          <div class="pl"><p class="en">Where do I board?</p><p class="ja">どこから乗りますか？</p><p class="sc"><b>乗船時</b> board</p></div>
+          <div class="pl"><p class="en">Where do I get off?</p><p class="ja">どこで降りますか？</p><p class="sc"><b>船内・島内</b> get off</p></div>
+          <div class="pl"><p class="en">What time is the next ferry?</p><p class="ja">次のフェリーは何時ですか？</p><p class="sc"><b>帰り</b> 重要</p></div>
+        </div>
+        <div class="sub">島内</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Where is the return ferry?</p><p class="ja">帰りのフェリーはどこですか？</p><p class="sc"><b>島内</b></p></div>
+          <div class="pl"><p class="en">How long is the wait?</p><p class="ja">待ち時間はどれくらいですか？</p><p class="sc"><b>列</b></p></div>
+          <div class="pl"><p class="en">Where is the entrance to the pedestal?</p><p class="ja">台座入口はどこですか？</p><p class="sc"><b>島内</b></p></div>
+          <div class="pl"><p class="en">Can I go up with this ticket?</p><p class="ja">このチケットで上に行けますか？</p><p class="sc"><b>台座確認</b></p></div>
+          <div class="pl"><p class="en">Could you take a photo of me?</p><p class="ja">写真を撮ってもらえますか？</p><p class="sc"><b>記念撮影</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 9 WALKING -->
+    <details class="scene">
+      <summary><span class="s-ico">🚶</span>9. 街歩き・道案内<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">道を聞く</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Where is Times Square?</p><p class="ja">タイムズスクエアはどこですか？</p><p class="sc"><b>道案内</b> 地名を変える</p></div>
+          <div class="pl"><p class="en">Which way is Central Park?</p><p class="ja">セントラルパークはどちらですか？</p><p class="sc"><b>道案内</b> which way</p></div>
+          <div class="pl"><p class="en">Is it far from here?</p><p class="ja">ここから遠いですか？</p><p class="sc"><b>距離確認</b></p></div>
+          <div class="pl"><p class="en">Can I walk there?</p><p class="ja">歩いて行けますか？</p><p class="sc"><b>移動判断</b> 重要</p></div>
+          <div class="pl"><p class="en">How long does it take to walk?</p><p class="ja">歩くとどれくらいですか？</p><p class="sc"><b>徒歩時間</b></p></div>
+          <div class="pl"><p class="en">Is this area safe?</p><p class="ja">この辺りは安全ですか？</p><p class="sc"><b>夜・初見エリア</b> ホテルで聞く</p></div>
+          <div class="pl"><p class="en">Is it safe to walk at night?</p><p class="ja">夜に歩いても安全ですか？</p><p class="sc"><b>夜移動前</b> 重要</p></div>
+          <div class="pl"><p class="en">Can you show me on the map?</p><p class="ja">地図で示してもらえますか？</p><p class="sc"><b>道案内</b> スマホ地図</p></div>
+          <div class="pl"><p class="en">I think I’m lost.</p><p class="ja">道に迷ったようです</p><p class="sc"><b>困った時</b> やわらかい</p></div>
+          <div class="pl"><p class="en">Am I close?</p><p class="ja">近くまで来ていますか？</p><p class="sc"><b>迷った時</b> 短い</p></div>
+        </div>
+        <div class="sub">写真</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Could you take a photo of me?</p><p class="ja">写真を撮ってもらえますか？</p><p class="sc"><b>観光地</b></p></div>
+          <div class="pl"><p class="en">One more, please.</p><p class="ja">もう1枚お願いします</p><p class="sc"><b>写真</b></p></div>
+          <div class="pl"><p class="en">Could you include the building?</p><p class="ja">建物を入れてもらえますか？</p><p class="sc"><b>写真</b></p></div>
+          <div class="pl"><p class="en">Could you take it vertically?</p><p class="ja">縦で撮ってもらえますか？</p><p class="sc"><b>スマホ撮影</b></p></div>
+          <div class="pl"><p class="en">Could you take it horizontally?</p><p class="ja">横で撮ってもらえますか？</p><p class="sc"><b>風景</b></p></div>
+          <div class="pl"><p class="en">Thank you, that’s great.</p><p class="ja">ありがとう、十分です</p><p class="sc"><b>写真後</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 10 AIRPORT -->
+    <details class="scene">
+      <summary><span class="s-ico">✈️</span>10. 空港・入国・荷物<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">入国審査</div>
+        <div class="plist">
+          <div class="pl"><p class="en">I’m here for sightseeing.</p><p class="ja">観光で来ました</p><p class="sc"><b>入国審査</b></p></div>
+          <div class="pl"><p class="en">I’m staying for six days.</p><p class="ja">6日間滞在します</p><p class="sc"><b>入国審査</b></p></div>
+          <div class="pl"><p class="en">I’m staying at this hotel.</p><p class="ja">このホテルに泊まります</p><p class="sc"><b>入国審査</b></p></div>
+          <div class="pl"><p class="en">I’m traveling alone.</p><p class="ja">一人旅です</p><p class="sc"><b>入国審査</b></p></div>
+          <div class="pl"><p class="en">I have a return ticket.</p><p class="ja">帰りの航空券があります</p><p class="sc"><b>入国審査</b></p></div>
+          <div class="pl"><p class="en">Here is my itinerary.</p><p class="ja">旅程表はこちらです</p><p class="sc"><b>入国審査</b></p></div>
+          <div class="pl"><p class="en">Here is my hotel reservation.</p><p class="ja">ホテル予約はこちらです</p><p class="sc"><b>入国審査</b></p></div>
+          <div class="pl"><p class="en">I don’t have anything to declare.</p><p class="ja">申告するものはありません</p><p class="sc"><b>税関</b></p></div>
+        </div>
+        <div class="sub">空港内・荷物</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Where is baggage claim?</p><p class="ja">荷物受取所はどこですか？</p><p class="sc"><b>到着後</b></p></div>
+          <div class="pl"><p class="en">My bag didn’t come out.</p><p class="ja">荷物が出てきません</p><p class="sc"><b>ロストバゲージ</b></p></div>
+          <div class="pl"><p class="en">My suitcase is damaged.</p><p class="ja">スーツケースが壊れています</p><p class="sc"><b>荷物トラブル</b></p></div>
+          <div class="pl"><p class="en">Where is the taxi stand?</p><p class="ja">タクシー乗り場はどこですか？</p><p class="sc"><b>空港</b></p></div>
+          <div class="pl"><p class="en">Where can I get an Uber?</p><p class="ja">Uberはどこで乗れますか？</p><p class="sc"><b>空港</b></p></div>
+          <div class="pl"><p class="en">I need to go to Manhattan.</p><p class="ja">マンハッタンへ行きたいです</p><p class="sc"><b>空港移動</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 11 PAYMENT/SHOPPING -->
+    <details class="scene">
+      <summary><span class="s-ico">💳</span>11. 支払い・買い物・チップ<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="sub">支払い</div>
+        <div class="plist">
+          <div class="pl"><p class="en">Can I pay by card?</p><p class="ja">カードで払えますか？</p><p class="sc"><b>支払い</b></p></div>
+          <div class="pl"><p class="en">I’ll pay by card.</p><p class="ja">カードで払います</p><p class="sc"><b>支払い</b></p></div>
+          <div class="pl"><p class="en">Contactless, please.</p><p class="ja">タッチ決済でお願いします</p><p class="sc"><b>支払い</b></p></div>
+          <div class="pl"><p class="en">Do I need to sign?</p><p class="ja">サインが必要ですか？</p><p class="sc"><b>カード支払い</b></p></div>
+          <div class="pl"><p class="en">Do I need to enter my PIN?</p><p class="ja">PIN入力が必要ですか？</p><p class="sc"><b>カード支払い</b></p></div>
+          <div class="pl"><p class="en">Can I get a receipt?</p><p class="ja">レシートをもらえますか？</p><p class="sc"><b>支払い後</b></p></div>
+          <div class="pl"><p class="en">Can I get an itemized receipt?</p><p class="ja">明細付きレシートをもらえますか？</p><p class="sc"><b>明細確認</b></p></div>
+          <div class="pl"><p class="en">I think I was charged twice.</p><p class="ja">二重に請求されたと思います</p><p class="sc"><b>支払いトラブル</b></p></div>
+          <div class="pl"><p class="en">Can I try another card?</p><p class="ja">別のカードを試していいですか？</p><p class="sc"><b>カード不具合</b></p></div>
+          <div class="pl"><p class="en">Is tip included?</p><p class="ja">チップは含まれていますか？</p><p class="sc"><b>会計時</b></p></div>
+        </div>
+        <div class="sub">買い物</div>
+        <div class="plist">
+          <div class="pl"><p class="en">I’m just looking, thanks.</p><p class="ja">見ているだけです、ありがとう</p><p class="sc"><b>店員対応</b></p></div>
+          <div class="pl"><p class="en">How much is this?</p><p class="ja">これはいくらですか？</p><p class="sc"><b>値段確認</b></p></div>
+          <div class="pl"><p class="en">Can I see this one?</p><p class="ja">これを見せてもらえますか？</p><p class="sc"><b>商品確認</b></p></div>
+          <div class="pl"><p class="en">Do you have this in stock?</p><p class="ja">これは在庫がありますか？</p><p class="sc"><b>在庫確認</b></p></div>
+          <div class="pl"><p class="en">Can I try this on?</p><p class="ja">試着できますか？</p><p class="sc"><b>服</b></p></div>
+          <div class="pl"><p class="en">I’ll take this one.</p><p class="ja">これを買います</p><p class="sc"><b>購入</b></p></div>
+          <div class="pl"><p class="en">I don’t need a bag.</p><p class="ja">袋はいりません</p><p class="sc"><b>会計</b></p></div>
+          <div class="pl"><p class="en">Can I get a small bag?</p><p class="ja">小さい袋をもらえますか？</p><p class="sc"><b>会計</b></p></div>
+          <div class="pl"><p class="en">Can I return this?</p><p class="ja">返品できますか？</p><p class="sc"><b>購入前</b></p></div>
+          <div class="pl"><p class="en">Can I get a gift receipt?</p><p class="ja">ギフト用レシートをもらえますか？</p><p class="sc"><b>お土産</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 12 SECURITY -->
+    <details class="scene">
+      <summary><span class="s-ico">🔍</span>12. 保安検査・持ち物確認<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <p class="sec-lead" style="margin:0 0 10px">美術館、MLB、ミュージカル、自由の女神で使う。</p>
+        <div class="plist">
+          <div class="pl"><p class="en">Do I need to open my bag?</p><p class="ja">バッグを開ける必要がありますか？</p><p class="sc"><b>手荷物検査</b> 重要</p></div>
+          <div class="pl"><p class="en">Should I take this out?</p><p class="ja">これは出した方がいいですか？</p><p class="sc"><b>保安検査</b> PC・水筒等</p></div>
+          <div class="pl"><p class="en">Can I bring this inside?</p><p class="ja">これは中に持ち込めますか？</p><p class="sc"><b>入場前</b> 万能</p></div>
+          <div class="pl"><p class="en">Is this bag OK?</p><p class="ja">このバッグは大丈夫ですか？</p><p class="sc"><b>球場・劇場</b> 短い</p></div>
+          <div class="pl"><p class="en">Do I need to throw this away?</p><p class="ja">これは捨てる必要がありますか？</p><p class="sc"><b>飲み物等</b></p></div>
+          <div class="pl"><p class="en">Where can I store this?</p><p class="ja">これはどこに預けられますか？</p><p class="sc"><b>持込不可時</b> store</p></div>
+          <div class="pl"><p class="en">Is there a locker?</p><p class="ja">ロッカーはありますか？</p><p class="sc"><b>荷物保管</b></p></div>
+          <div class="pl"><p class="en">Is there a bag check?</p><p class="ja">荷物預かりはありますか？</p><p class="sc"><b>美術館等</b> bag check</p></div>
+          <div class="pl"><p class="en">I have medicine in my bag.</p><p class="ja">バッグに薬が入っています</p><p class="sc"><b>検査時</b> 必要時</p></div>
+          <div class="pl"><p class="en">I have a portable battery.</p><p class="ja">モバイルバッテリーがあります</p><p class="sc"><b>検査時</b> portable battery</p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 13 PHONE -->
+    <details class="scene">
+      <summary><span class="s-ico">🔋</span>13. スマホ・チケット・通信トラブル<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="plist">
+          <div class="pl"><p class="en">My ticket is on my phone.</p><p class="ja">チケットはスマホに入っています</p><p class="sc"><b>入場時</b></p></div>
+          <div class="pl"><p class="en">I have it in Google Wallet.</p><p class="ja">Googleウォレットに入っています</p><p class="sc"><b>入場時</b></p></div>
+          <div class="pl"><p class="en">My ticket won’t load.</p><p class="ja">チケットが表示されません</p><p class="sc"><b>通信不良</b></p></div>
+          <div class="pl"><p class="en">The QR code won’t open.</p><p class="ja">QRコードが開きません</p><p class="sc"><b>チケット表示</b></p></div>
+          <div class="pl"><p class="en">My phone is slow.</p><p class="ja">スマホの動きが遅いです</p><p class="sc"><b>入場時</b></p></div>
+          <div class="pl"><p class="en">The screen is too dark.</p><p class="ja">画面が暗すぎます</p><p class="sc"><b>QR読取</b></p></div>
+          <div class="pl"><p class="en">Can I try again?</p><p class="ja">もう一度試していいですか？</p><p class="sc"><b>読取失敗</b></p></div>
+          <div class="pl"><p class="en">Can I step aside for a moment?</p><p class="ja">少し横にずれてもいいですか？</p><p class="sc"><b>列で焦る時</b></p></div>
+          <div class="pl"><p class="en">I need Wi-Fi.</p><p class="ja">Wi-Fiが必要です</p><p class="sc"><b>通信不良</b></p></div>
+          <div class="pl"><p class="en">Is there free Wi-Fi here?</p><p class="ja">ここに無料Wi-Fiはありますか？</p><p class="sc"><b>施設内</b></p></div>
+          <div class="pl"><p class="en">My battery is almost dead.</p><p class="ja">電池がほとんどありません</p><p class="sc"><b>緊急</b></p></div>
+          <div class="pl"><p class="en">Can I charge my phone here?</p><p class="ja">ここで充電できますか？</p><p class="sc"><b>カフェ・ホテル</b></p></div>
+          <div class="pl"><p class="en">Do you have a charger?</p><p class="ja">充電器はありますか？</p><p class="sc"><b>ホテル等</b></p></div>
+          <div class="pl"><p class="en">I need to show my ticket.</p><p class="ja">チケットを見せる必要があります</p><p class="sc"><b>電池切れ寸前</b></p></div>
+          <div class="pl"><p class="en">Can you help me with this?</p><p class="ja">これを手伝ってもらえますか？</p><p class="sc"><b>スマホ操作</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 14 HEALTH/EMERGENCY -->
+    <details class="scene">
+      <summary><span class="s-ico">🚑</span>14. 体調不良・緊急時<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <div class="plist">
+          <div class="pl"><p class="en">I don’t feel well.</p><p class="ja">体調がよくありません</p><p class="sc"><b>体調不良</b></p></div>
+          <div class="pl"><p class="en">I feel dizzy.</p><p class="ja">めまいがします</p><p class="sc"><b>体調不良</b></p></div>
+          <div class="pl"><p class="en">I feel nauseous.</p><p class="ja">吐き気がします</p><p class="sc"><b>体調不良</b></p></div>
+          <div class="pl"><p class="en">I have a headache.</p><p class="ja">頭が痛いです</p><p class="sc"><b>体調不良</b></p></div>
+          <div class="pl"><p class="en">I have a stomachache.</p><p class="ja">お腹が痛いです</p><p class="sc"><b>体調不良</b></p></div>
+          <div class="pl"><p class="en">I have chest pain.</p><p class="ja">胸が痛いです</p><p class="sc"><b>緊急</b></p></div>
+          <div class="pl"><p class="en">I can’t breathe well.</p><p class="ja">息がしづらいです</p><p class="sc"><b>緊急</b></p></div>
+          <div class="pl"><p class="en">I need a doctor.</p><p class="ja">医師が必要です</p><p class="sc"><b>緊急</b></p></div>
+          <div class="pl"><p class="en">Please call an ambulance.</p><p class="ja">救急車を呼んでください</p><p class="sc"><b>緊急</b></p></div>
+          <div class="pl"><p class="en">Please call 911.</p><p class="ja">911に電話してください</p><p class="sc"><b>緊急</b></p></div>
+          <div class="pl"><p class="en">Where is the pharmacy?</p><p class="ja">薬局はどこですか？</p><p class="sc"><b>軽い体調不良</b></p></div>
+          <div class="pl"><p class="en">Do you have pain medicine?</p><p class="ja">痛み止めはありますか？</p><p class="sc"><b>薬局</b></p></div>
+          <div class="pl"><p class="en">I need water.</p><p class="ja">水が必要です</p><p class="sc"><b>体調不良</b></p></div>
+          <div class="pl"><p class="en">I’m allergic to this.</p><p class="ja">これにアレルギーがあります</p><p class="sc"><b>薬・食事</b></p></div>
+          <div class="pl"><p class="en">Could you help me call my hotel?</p><p class="ja">ホテルに電話するのを手伝ってもらえますか？</p><p class="sc"><b>困った時</b></p></div>
+        </div>
+      </div>
+    </details>
+
+    <!-- 15 REFUSAL -->
+    <details class="scene">
+      <summary><span class="s-ico">🙅</span>15. 勧誘・不審な声かけを断る<span class="s-arrow">▼</span></summary>
+      <div class="scene-body">
+        <p class="sec-lead" style="margin:0 0 12px">バーの本数＝断りの強さ。状況に合わせて強める。</p>
+        <div class="ref">
+          <div class="rrow s1"><p class="ren">No, thank you.</p><p class="rja">いいえ、けっこうです／通常の断り</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">弱</span></div></div>
+          <div class="rrow s1"><p class="ren">I’m good, thanks.</p><p class="rja">大丈夫です、ありがとう／カジュアル</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">弱</span></div></div>
+          <div class="rrow s1"><p class="ren">Not today, thanks.</p><p class="rja">今日はけっこうです／勧誘</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">弱</span></div></div>
+          <div class="rrow s2"><p class="ren">Sorry, I have to go.</p><p class="rja">すみません、行かないと／立ち去る</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">中</span></div></div>
+          <div class="rrow s2"><p class="ren">I don’t need it.</p><p class="rja">必要ありません／物売り</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">中</span></div></div>
+          <div class="rrow s2"><p class="ren">I’m not interested.</p><p class="rja">興味ありません／しつこい時</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">中</span></div></div>
+          <div class="rrow s3"><p class="ren">Please don’t touch me.</p><p class="rja">触らないでください／距離が近い時</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">強</span></div></div>
+          <div class="rrow s3"><p class="ren">Please leave me alone.</p><p class="rja">放っておいてください／しつこい時</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">強</span></div></div>
+          <div class="rrow s3"><p class="ren">I said no.</p><p class="rja">断りました／さらにしつこい時</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">強</span></div></div>
+          <div class="rrow s4"><p class="ren">I’m calling the police.</p><p class="rja">警察を呼びます／危険時</p><div class="meter"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lvl-label">最強</span></div></div>
+        </div>
+        <div class="redbox" style="margin-top:14px">
+          <h3>⚠️ 赤ライン</h3>
+          <ul style="margin:0;padding-left:18px;font-size:13.5px">
+            <li><b>“Maybe later.” は避ける。</b>あとで可能と受け取られることがある。</li>
+            <li><b>長く説明しない。</b>断る時は No, thank you. で十分。</li>
+            <li><b>しつこい時は説得しようとせず、距離を取る。</b></li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ ⑥ REPLY ============ -->
+  <section id="reply">
+    <div class="sec-head"><span class="ico">💬</span><h2>相手の英語と返答</h2></div>
+    <p class="sec-lead">よく聞かれる質問と、そのまま使える短い返答。</p>
+
+    <h3 class="sub">🍽️ レストラン</h3>
+    <div class="qa">
+      <div class="qrow"><p class="ask">How many? <span class="mean">何名ですか？</span></p><p class="ans">One. / Just one.</p></div>
+      <div class="qrow"><p class="ask">Do you have a reservation? <span class="mean">予約はありますか？</span></p><p class="ans">Yes, I have a reservation.</p></div>
+      <div class="qrow"><p class="ask">What would you like? <span class="mean">何にしますか？</span></p><p class="ans">I’ll have this.</p></div>
+      <div class="qrow"><p class="ask">Anything to drink? <span class="mean">飲み物は？</span></p><p class="ans">Water, please.</p></div>
+      <div class="qrow"><p class="ask">Still or sparkling? <span class="mean">普通の水？炭酸水？</span></p><p class="ans">Still, please.</p></div>
+      <div class="qrow"><p class="ask">How is everything? <span class="mean">お食事はいかがですか？</span></p><p class="ans">Everything is good.</p></div>
+      <div class="qrow"><p class="ask">Are you still working on it? <span class="mean">まだ食べていますか？</span></p><p class="ans">Yes, I’m still working on it. / I’m done.</p></div>
+      <div class="qrow"><p class="ask">Do you need a box? <span class="mean">持ち帰り箱は要りますか？</span></p><p class="ans">Yes, please. / No, thank you.</p></div>
+    </div>
+
+    <h3 class="sub">🏨 ホテル</h3>
+    <div class="qa">
+      <div class="qrow"><p class="ask">May I see your ID? <span class="mean">身分証を見せてください</span></p><p class="ans">Here is my passport.</p></div>
+      <div class="qrow"><p class="ask">Do you have a reservation? <span class="mean">予約はありますか？</span></p><p class="ans">Yes, I have a reservation.</p></div>
+      <div class="qrow"><p class="ask">Could you insert your card? <span class="mean">カードを差し込んでください</span></p><p class="ans">Sure.</p></div>
+      <div class="qrow"><p class="ask">How many nights? <span class="mean">何泊ですか？</span></p><p class="ans">Six nights.</p></div>
+      <div class="qrow"><p class="ask">Do you need help with your bags? <span class="mean">荷物を手伝いましょうか？</span></p><p class="ans">Yes, please. / No, thank you.</p></div>
+    </div>
+
+    <h3 class="sub">🎫 入場・チケット</h3>
+    <div class="qa">
+      <div class="qrow"><p class="ask">Can I see your ticket? <span class="mean">チケットを見せてください</span></p><p class="ans">Here is my ticket.</p></div>
+      <div class="qrow"><p class="ask">Please scan your ticket. <span class="mean">チケットをスキャンしてください</span></p><p class="ans">Sure.</p></div>
+      <div class="qrow"><p class="ask">Which time slot? <span class="mean">何時枠ですか？</span></p><p class="ans">10 a.m.</p></div>
+      <div class="qrow"><p class="ask">Do you have a bag? <span class="mean">バッグはありますか？</span></p><p class="ans">Yes, I do.</p></div>
+      <div class="qrow"><p class="ask">Please open your bag. <span class="mean">バッグを開けてください</span></p><p class="ans">Sure.</p></div>
+      <div class="qrow"><p class="ask">This line is for ticket holders. <span class="mean">この列はチケット保持者用です</span></p><p class="ans">I have a ticket.</p></div>
+    </div>
+
+    <h3 class="sub">💳 支払い</h3>
+    <div class="qa">
+      <div class="qrow"><p class="ask">Cash or card? <span class="mean">現金ですか、カードですか？</span></p><p class="ans">Card, please.</p></div>
+      <div class="qrow"><p class="ask">Do you need a receipt? <span class="mean">レシートは必要ですか？</span></p><p class="ans">Yes, please.</p></div>
+      <div class="qrow"><p class="ask">Would you like a bag? <span class="mean">袋は必要ですか？</span></p><p class="ans">No, thank you.</p></div>
+      <div class="qrow"><p class="ask">Please sign here. <span class="mean">ここにサインしてください</span></p><p class="ans">Sure.</p></div>
+      <div class="qrow"><p class="ask">Please enter your PIN. <span class="mean">PINを入力してください</span></p><p class="ans">Sure.</p></div>
+    </div>
+
+    <h3 class="sub">🗣️ 発音が不安でも通じる言い換え</h3>
+    <div class="plist">
+      <div class="pl"><p class="en">This one, please. <span style="font-weight:400;color:var(--muted);font-size:13px">／ Can I get this one?</span></p><p class="ja">これをください</p></div>
+      <div class="pl"><p class="en">I’m going here. <span style="font-weight:400;color:var(--muted);font-size:13px">／ Could you take me here?</span></p><p class="ja">ここに行きたい</p></div>
+      <div class="pl"><p class="en">I don’t understand. <span style="font-weight:400;color:var(--muted);font-size:13px">／ I’m sorry, I don’t understand.</span></p><p class="ja">分かりません</p></div>
+      <div class="pl"><p class="en">Again, please. <span style="font-weight:400;color:var(--muted);font-size:13px">／ Could you say that again?</span></p><p class="ja">もう一度</p></div>
+      <div class="pl"><p class="en">Slowly, please. <span style="font-weight:400;color:var(--muted);font-size:13px">／ Could you speak slowly, please?</span></p><p class="ja">ゆっくり</p></div>
+      <div class="pl"><p class="en">Map, please. <span style="font-weight:400;color:var(--muted);font-size:13px">／ Could you show me on the map?</span></p><p class="ja">地図で見せて</p></div>
+      <div class="pl"><p class="en">Photo, please? <span style="font-weight:400;color:var(--muted);font-size:13px">／ Could you take a photo of me?</span></p><p class="ja">写真を撮って</p></div>
+      <div class="pl"><p class="en">It’s OK. <span style="font-weight:400;color:var(--muted);font-size:13px">／ That’s okay, thank you.</span></p><p class="ja">大丈夫です</p></div>
+      <div class="pl"><p class="en">No, thanks. <span style="font-weight:400;color:var(--muted);font-size:13px">／ No, thank you.</span></p><p class="ja">結構です</p></div>
+      <div class="pl"><p class="en">Help, please. <span style="font-weight:400;color:var(--muted);font-size:13px">／ Could you help me?</span></p><p class="ja">助けてください</p></div>
+    </div>
+  </section>
+
+  <!-- ============ ⑦ LEVELS ============ -->
+  <section id="levels">
+    <div class="sec-head"><span class="ico">📊</span><h2>優先順位別まとめ</h2></div>
+    <p class="sec-lead">覚える深さの3レベル。</p>
+
+    <h3 class="sub" style="color:var(--danger)">レベル1：絶対に覚える</h3>
+    <div class="plist">
+      <div class="pl"><p class="en">Excuse me.</p><p class="ja">すみません</p></div>
+      <div class="pl"><p class="en">Please speak slowly.</p><p class="ja">ゆっくり話してください</p></div>
+      <div class="pl"><p class="en">I have a ticket.</p><p class="ja">チケットを持っています</p></div>
+      <div class="pl"><p class="en">Here is my ticket.</p><p class="ja">チケットはこちらです</p></div>
+      <div class="pl"><p class="en">Is this the right line?</p><p class="ja">この列で合っていますか？</p></div>
+      <div class="pl"><p class="en">Could you help me?</p><p class="ja">手伝ってもらえますか？</p></div>
+      <div class="pl"><p class="en">Where is the restroom?</p><p class="ja">トイレはどこですか？</p></div>
+      <div class="pl"><p class="en">Can I pay by card?</p><p class="ja">カードで払えますか？</p></div>
+      <div class="pl"><p class="en">No, thank you.</p><p class="ja">いいえ、けっこうです</p></div>
+      <div class="pl"><p class="en">Could you take a photo of me?</p><p class="ja">写真を撮ってもらえますか？</p></div>
+    </div>
+
+    <h3 class="sub" style="color:#b07c12">レベル2：スマホに保存しておく</h3>
+    <div class="plist">
+      <div class="pl"><p class="en">My ticket is on my phone.</p><p class="ja">チケットはスマホに入っています</p></div>
+      <div class="pl"><p class="en">I have it in Google Wallet.</p><p class="ja">Googleウォレットに入っています</p></div>
+      <div class="pl"><p class="en">My ticket won’t load.</p><p class="ja">チケットが表示されません</p></div>
+      <div class="pl"><p class="en">Can I step aside for a moment?</p><p class="ja">少し横にずれてもいいですか？</p></div>
+      <div class="pl"><p class="en">Could you say it more simply?</p><p class="ja">もっと簡単に言ってもらえますか？</p></div>
+      <div class="pl"><p class="en">Can you show me on the map?</p><p class="ja">地図で教えてもらえますか？</p></div>
+      <div class="pl"><p class="en">Is it safe to walk there?</p><p class="ja">そこまで歩いて安全ですか？</p></div>
+      <div class="pl"><p class="en">Do I need to open my bag?</p><p class="ja">バッグを開ける必要がありますか？</p></div>
+      <div class="pl"><p class="en">Can I bring this inside?</p><p class="ja">これは中に持ち込めますか？</p></div>
+      <div class="pl"><p class="en">Please call 911.</p><p class="ja">911に電話してください</p></div>
+    </div>
+
+    <h3 class="sub" style="color:var(--ok)">レベル3：場面別に見返す（最初に見る表現）</h3>
+    <div class="plist">
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">タクシー</b></p><p class="en">Can you take me to this address?</p></div>
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">ホテル</b></p><p class="en">I have a reservation.</p></div>
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">地下鉄</b></p><p class="en">Does this train go to…?</p></div>
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">レストラン</b></p><p class="en">Table for one, please.</p></div>
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">美術館</b></p><p class="en">Is this the line for ticket holders?</p></div>
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">ミュージカル</b></p><p class="en">Could you help me find my seat?</p></div>
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">MLB</b></p><p class="en">Which gate should I use?</p></div>
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">自由の女神</b></p><p class="en">Is this ferry going to Liberty Island?</p></div>
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">街歩き</b></p><p class="en">Can you show me on the map?</p></div>
+      <div class="pl"><p class="ja"><b style="color:var(--accent)">トラブル</b></p><p class="en">I need help.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ ⑧ RED LINE ============ -->
+  <section id="redline">
+    <div class="sec-head"><span class="ico">🚫</span><h2>赤ライン：避ける表現・行動</h2></div>
+    <p class="sec-lead">きつく聞こえる・誤解される言い方は、右の表現に置き換える。</p>
+    <div class="redbox">
+      <div class="swap">
+        <div class="swrow"><p class="bad">What?</p><p class="reason">きつく聞こえる</p><p class="good">Sorry? / Could you say that again?</p></div>
+        <div class="swrow"><p class="bad">Give me this.</p><p class="reason">命令っぽい</p><p class="good">Can I get this?</p></div>
+        <div class="swrow"><p class="bad">Speak slowly.</p><p class="reason">命令っぽい</p><p class="good">Please speak slowly.</p></div>
+        <div class="swrow"><p class="bad">I don’t understand English.</p><p class="reason">会話不能に聞こえる</p><p class="good">My English is not good.</p></div>
+        <div class="swrow"><p class="bad">Maybe later.</p><p class="reason">勧誘に対して曖昧</p><p class="good">No, thank you.</p></div>
+        <div class="swrow"><p class="bad">長い説明</p><p class="reason">伝わりにくい</p><p class="good">短文＋スマホ提示</p></div>
+        <div class="swrow"><p class="bad">焦って列で粘る</p><p class="reason">後ろが詰まる</p><p class="good">Can I step aside for a moment?</p></div>
+        <div class="swrow"><p class="bad">夜道で迷って歩き続ける</p><p class="reason">安全面で不利</p><p class="good">ホテル・店・駅員に確認</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ⑨ TEMPLATES ============ -->
+  <section id="template">
+    <div class="sec-head"><span class="ico">🧩</span><h2>実戦テンプレート</h2></div>
+    <p class="sec-lead">上から順に言うだけ。場面ごとの「型」。</p>
+
+    <div class="tpl">
+      <h3><span class="tnum">入場時</span></h3>
+      <ol>
+        <li><span class="e">Excuse me.</span><span class="j">すみません。</span></li>
+        <li><span class="e">I have a ticket.</span><span class="j">チケットを持っています。</span></li>
+        <li><span class="e">Here is my ticket.</span><span class="j">チケットはこちらです。</span></li>
+        <li><span class="e">Can you scan this?</span><span class="j">これをスキャンできますか？</span></li>
+      </ol>
+    </div>
+
+    <div class="tpl">
+      <h3><span class="tnum">チケットが表示されない時</span></h3>
+      <ol>
+        <li><span class="e">My ticket won’t load.</span><span class="j">チケットが表示されません。</span></li>
+        <li><span class="e">I have it in Google Wallet.</span><span class="j">Googleウォレットに入っています。</span></li>
+        <li><span class="e">Can I step aside for a moment?</span><span class="j">少し横にずれてもいいですか？</span></li>
+        <li><span class="e">Could you help me?</span><span class="j">手伝ってもらえますか？</span></li>
+      </ol>
+    </div>
+
+    <div class="tpl">
+      <h3><span class="tnum">道に迷った時</span></h3>
+      <ol>
+        <li><span class="e">Excuse me.</span><span class="j">すみません。</span></li>
+        <li><span class="e">I’m looking for this place.</span><span class="j">この場所を探しています。</span></li>
+        <li><span class="e">Can you show me on the map?</span><span class="j">地図で教えてもらえますか？</span></li>
+        <li><span class="e">Can I walk there?</span><span class="j">歩いて行けますか？</span></li>
+      </ol>
+    </div>
+
+    <div class="tpl">
+      <h3><span class="tnum">レストランで注文する時</span></h3>
+      <ol>
+        <li><span class="e">Table for one, please.</span><span class="j">1人です。</span></li>
+        <li><span class="e">I’m ready to order.</span><span class="j">注文できます。</span></li>
+        <li><span class="e">I’ll have this.</span><span class="j">これにします。</span></li>
+        <li><span class="e">Water, please.</span><span class="j">水をお願いします。</span></li>
+      </ol>
+    </div>
+
+    <div class="tpl">
+      <h3><span class="tnum">聞き取れない時</span></h3>
+      <ol>
+        <li><span class="e">Sorry.</span><span class="j">すみません。</span></li>
+        <li><span class="e">My English is not good.</span><span class="j">英語が得意ではありません。</span></li>
+        <li><span class="e">Please speak slowly.</span><span class="j">ゆっくり話してください。</span></li>
+        <li><span class="e">Could you say that again?</span><span class="j">もう一度言ってもらえますか？</span></li>
+      </ol>
+    </div>
+
+    <div class="tpl">
+      <h3><span class="tnum">勧誘を断る時</span></h3>
+      <ol>
+        <li><span class="e">No, thank you.</span><span class="j">いいえ、けっこうです。</span></li>
+        <li><span class="e">I’m good, thanks.</span><span class="j">大丈夫です、ありがとう。</span></li>
+        <li><span class="e">I’m not interested.</span><span class="j">興味ありません。（しつこい時）</span></li>
+        <li><span class="e">Please leave me alone.</span><span class="j">放っておいてください。（しつこい時）</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ ⑩ BASIS ============ -->
+  <section id="basis">
+    <div class="sec-head"><span class="ico">📌</span><h2>根拠・確度</h2></div>
+    <div class="basis">
+      <div class="bcard fact">
+        <h3>● 事実</h3>
+        <ul>
+          <li>旅行英語は、長文より「短い定型文」「スマホ画面提示」「指差し」の組み合わせが実用的。</li>
+          <li>事前取得チケット中心の旅行では、購入表現よりチケット提示・QR読取・列／ゲート／席確認が重要。</li>
+          <li>NYCは地下鉄・劇場・球場・美術館・フェリーなど、列・入口・保安検査・チケット確認の場面が多い。</li>
+        </ul>
+      </div>
+      <div class="bcard guess">
+        <h3>● 推測（前提）</h3>
+        <ul>
+          <li>長く会話するより、必要な場面で短く正確に伝える方が実用的。</li>
+          <li>Googleウォレットにチケットを入れる場面が多く、提示・スマホトラブル対応を厚めにすると有効。</li>
+          <li>一人旅のため、写真依頼・道案内・安全確認・体調不良時の表現も重要。</li>
+        </ul>
+      </div>
+      <div class="bcard op">
+        <h3>● 意見</h3>
+        <ul>
+          <li>すべてを丸暗記せず、Sランク30個だけ覚えて残りはスマホで検索・確認するのが最も使いやすい。</li>
+          <li>特に重要：I have a ticket. / Is this the right line? / Please speak slowly. / Could you help me? / My ticket won’t load.</li>
+        </ul>
+      </div>
+      <div style="text-align:center;margin-top:6px">
+        <span class="conf">✓ 確度：高</span>
+      </div>
+      <div class="note-inline">理由：NYC旅行の実際の予定・チケット事前取得前提・一人旅・英語初心者という条件に合わせ、現地で必要になる順に再構成しているため。</div>
+    </div>
+  </section>
+
+  <p class="endline">ニューヨーク旅行 英語フレーズ図解 ／ 2026年6月26日時点</p>
+</main>
+</body>
+</html>
